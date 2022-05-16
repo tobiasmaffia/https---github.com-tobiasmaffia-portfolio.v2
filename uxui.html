@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/uxui.css">
+    <title>Portfolio Tobias Maffia</title>
+    <script src="/scripts/app.js"></script>
+</head>
+
+<body>
+ <!-- Loading CSS -->
+ <style>
+    .loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: 1s all;
+        opacity: 0;
+    }
+    .loading.show {
+        opacity: 1;
+    }
+    .loading .spin {
+        border: 3px solid hsla(0, 0%, 100%, 0.2);
+        border-top-color: #ffffff;
+        border-radius: 50%;
+        width: 3em;
+        height: 3em;
+        animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }            
+</style>
+
+<!-- Loading HTML -->
+<div class="loading show">
+    <div class="spin"></div>
+</div>
+
+<!-- Loading Javascript -->
+<script>
+// Loading
+var Loading=(loadingDelayHidden=0)=>{let loading=null;const myLoadingDelayHidden=loadingDelayHidden;let imgs=[];let lenImgs=0;let counterImgsLoading=0;function incrementCounterImgs(){counterImgsLoading+=1;if(counterImgsLoading===lenImgs){hideLoading()}}function hideLoading(){if(loading!==null){loading.classList.remove('show');setTimeout(function(){loading.remove()},myLoadingDelayHidden)}}function init(){document.addEventListener('DOMContentLoaded',function(){loading=document.querySelector('.loading');imgs=Array.from(document.images);lenImgs=imgs.length;if(imgs.length===0){hideLoading()}else{imgs.forEach(function(img){img.addEventListener('load',incrementCounterImgs,false)})}})}return{'init':init}}
+
+Loading(1000).init();
+</script>
+
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <a id="logo" href="index.html" class="nav-logo__link" title="logo">tmaffia.studio</a>
+                </div>
+                <div class="nav-menu">
+                    <ul class="nav-menu__item">
+                        <li><a href="/index.html#work" class="nav-menu__link">.work</a></li>
+                        <li><a href="/about.html" class="nav-menu__link">.about</a></li>
+                        <li><a href="#contact" class="nav-menu__link">.contact</a></li>
+                        <li><a href="/images/TOBIAS_MAFFIA_RESUME.pdf" download="Tobias-Maffia-Resume" class="nav-menu__link">.my resume</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="hero">
+                <div class="hero-text">
+                    <h2 class="hero-text__main">
+                        UX/UI</h2>
+                        <h2 class="hero-text__main2">
+                            (THEY ARE NOT THE SAME)</h2>
+                            <h2 class="hero-text__main3">
+                                But they work together</h2>
+                    <p class="hero-text__subs">UI design and UX design involve very different skill sets, but they are integral to each other’s success. A beautiful design can’t save an interface that’s not attractive and confusing to navigate, as in the other hand, a brilliant and perfectly-appropriate user experience can be sunk by bad visual interface design that makes using the app unpleasant. Both UI and UX designs need to be flawlessly executed and perfectly aligned with pre-existing user expectations to create an excellent user interface/experience. And when those stars align the results can be astounding.</p>    
+
+                        <h2 class="hero-text__main3" style="text-align: right; margin-top: 6rem;">
+                            How do I design</h2>
+
+                            <h2 class="hero-text__main4">
+                                DESIGN THINKING AND USER-CENTRIC DESIGN</h2>
+                                <p class="hero-text__subs">User-centered design (UCD) is an iterative design process in which designers focus on the users and their needs in each phase of the design process. In UCD, you base your projects upon an explicit understanding of the users, tasks and environments. The aim of the process is to capture and address the whole user experience. </p>    
+                             <img class="hero-image__main " src="/images/uxuicuadrito.png" alt="">
+                             
+                             <h2 class="hero-text__main3">
+                                Let's see what I do</h2>
+                            </div>      
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="service">
+            <div class="container">
+                <div class="card card-1">
+                    <div class="card-image">
+                        <a href="https://www.behance.net/gallery/142401825/Portfolio-Web-UX-UI-Report" target="_blank"><img src="/images/portux.png" alt="Images" ></a>
+                    </div>
+                    <div class="card-text">
+                        <a href="https://www.behance.net/gallery/142401825/Portfolio-Web-UX-UI-Report" target="_blank"><h2 class="card-text__title">Portfolio web</h2></a>
+                        <p class="card-text__subs">Yes, it was planned, drawed, tested and designed. For the UI I have used maily Adobe XD and Illustrator. <br> <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="card card-2">
+                    <div class="card-image">
+                        <a href="https://www.behance.net/gallery/128757269/tuVino-Maffia-Tobias" target="_blank"><img src="/images/tuvinoapp.svg" alt="Images"></a>
+                    </div>
+                    <div class="card-text">
+                        <a href="https://www.behance.net/gallery/128757269/tuVino-Maffia-Tobias" target="_blank"><h2 class="card-text__title">tuVino App</h2></a>
+                        <p class="card-text__subs"> UXUI project for Coderhouse.  It’s, for now, only available in Spanish. It was my first UX/UI project, I should re-design it.
+                        </p>
+                    </div>
+                </div>
+                <div class="card card-3">
+                    <div class="card-image">
+                        <a href="/underConstruction/index2.html" target="_blank"><img src="/images/uconweb.svg" alt="Images"></a>
+                    </div>
+                    <div class="card-text">
+                        <a href="/underConstruction/index2.html"><h2 class="card-text__title"> Extreme makeover: UX edition</h2></a>
+                         <p class="card-text__subs" id="filmlink">  A local textile factory troubling with its wbesite and branding asked me for some help ;)  </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </section>
+    <section class="contact">
+        <div class="container">
+            <div class="contact-image">
+                <img src="/images/thestudio.png" alt="Images">
+            </div>
+            <div id="contact" class="contact-form">
+                <h2 class="contact-title">Let's talk!</h2>
+                <form class="form" name="contact-form" netlify>
+                    <div class="form-group group-1">
+                        <input type="text" name="name" class="form-input" placeholder="How's your name?" required>
+                    </div>
+                    <div class="form-group group-2">
+                        <input type="text" name="email" class="form-input" placeholder="Please type your Email" required>
+                    </div>
+                    <div class="form-group group-3">
+                        <textarea name="message" rows="5" class="form-textarea"
+                            placeholder="You cant ask me whatever you want, or just say hi!" required></textarea>
+                    </div>
+                    <div class="form-group group-4">
+                        <input type="submit" class="form-submit" value="Contact me">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <a href="#logo" class="return"><i class="fa fa-arrow-up"></i></a>
+        <div class="footer-menu">
+            <ul class="footer-menu__item">
+                <li><a href="https://www.linkedin.com/in/tobiasmaffia/" class="footer-menu__link" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/tmaffia.studio/" class="footer-menu__link" target="_blank">Instagram</a></li>
+                <li><a href="https://www.behance.net/tobiasmaffia" class="footer-menu__link" target="_blank">Behance</a></li>
+                <li><a href="mailto:maffiatobias@gmail.com" class="footer-menu__link" target="_blank">Email</a></li>
+            </ul>
+        </div>
+        <div class="footer-copy">
+            <p>Based in Buenos Aires, Argentina</p>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
